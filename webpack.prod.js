@@ -7,7 +7,7 @@ module.exports = merge(common, {
   // use the same entry in webpack.common.js
   // entry: "./src/index.js", // the input file path that webpack will run in the first time
   output: {
-    filename: "[name].[contenthash].js", // the name of the file after building
+    filename: "[name].[contenthash].bundle.js", // the name of the file after building
     path: path.resolve(__dirname, "build"), //define the path of building folder, default is dist
     clean: true,
     assetModuleFilename: "./imgs/[name].[hash].[ext]", // define the path and name of assets files
