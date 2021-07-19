@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/danhnguyeen/webpack-app#readme",
   "devDependencies": {
+    "bootstrap": "^5.0.2",
     "css-loader": "^6.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
     "style-loader": "^3.1.0",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2"
