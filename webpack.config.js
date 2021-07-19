@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -5,9 +6,12 @@ module.exports = {
   // devtool: false,
   entry: "./src/index.js", // the input file path that webpack will run in the first time
   output: {
-    filename: "main.js", // the name of the file after building
+    filename: "main.[contenthash].js", // the name of the file after building
     path: path.resolve(__dirname, 'build') //define the path of building folder, default is dist
   },
+  plugins: [new HtmlWebpackPlugin({
+    template: './index.html'
+  })],
   module: {
     rules: [
       {
