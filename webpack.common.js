@@ -3,9 +3,12 @@ const path = require('path');
 
 module.exports = {
   // devtool: false,
-  entry: "./src/index.js", // the input file path that webpack will run in the first time
+  entry: {
+    main: "./src/index.js", // the input file path that webpack will run in the first time
+    vendor: "./src/vendor.js",
+  },
   plugins: [new HtmlWebpackPlugin({
-    template: './index.html'
+    template: './src/index.html'
   })],
   module: {
     rules: [
@@ -19,7 +22,11 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
-      }
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ]
   }
 }
