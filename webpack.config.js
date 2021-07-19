@@ -8,4 +8,12 @@ module.exports = {
     filename: "main.js", // the name of the file after building
     path: path.resolve(__dirname, 'build') //define the path of building folder, default is dist
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      }
+    ]
+  }
 }
